@@ -98,8 +98,6 @@ The most important building blocks of a program are *variables,* *operators*, *c
 		}
 	```
 	* Here the **return type** is integer, the **arguments** are the two integers *x* and *y*, and the **body** of the function adds the two arguments. 		
-</br>
-</br>
 * A function could also not return anything. In that case, we say the return type is ```void```
 
 	```java
@@ -167,8 +165,6 @@ The most important building blocks of a program are *variables,* *operators*, *c
 		* ```int i = 0;``` declares a new variable *i*
 		* ```i<100``` means "Keep looping while ```i``` is less than 100"
 		* ```i++``` means add 1 to *i* after *every loop*
-</br>
-</br>
 * The ```while``` loop
 	* A *while loop* loops forever until a condition is met
 		* It's kind of like a for loop, except instead of stopping when a number is reached, the while loop stops when a *condition is reached*.
@@ -185,16 +181,12 @@ The most important building blocks of a program are *variables,* *operators*, *c
 ## Putting all of This Together
 * Now I will present a little coding challenge
 * Using this [Java Playground](https://code.labstack.com/java), write a Java code that will have:
-</br>
 
 	1. A function that takes voltage and current and **returns the total amount of power**.
 		* Takes two integers (or floats): Voltage and Current
 		* Returns one integer (or float): Power
-	</br>
-	</br>
 	2. A function that takes a first name and last name and **returns the full name in capital letters as a single string**.
-	</br>
-	</br>
+
 	3. A function that prints your name *diagonally* using a **for loop**
 		* E.g.
 	```java
@@ -284,20 +276,18 @@ In this section, we'll go over the most basic and **essential terminal commands*
 		* ```cd Documents```
 		* ```cd Desktop/FRC/RobotsAreLit```
 	* ```cd ~``` will take you back to your home directory
-</br>
-</br>
+---
 2. **List**
-	> ```ls```
+	>	```ls```
 	* This command simply **lists the files** in our working directory
 	* Example:
 		* Input: 
 			* ```ls```
 		* Output:
 			*  ```'Folder 1'  'Folder 2'  'Documents'  'Desktop'```
-</br>
-</br>
+---
 3. **Make Directory**
-	>```mkdir <directory>```
+	>	```mkdir <directory>```
 	* This command will make a new directory of the name passed
 	* Example:
 		```mkdir frcWorkshop```
@@ -313,39 +303,35 @@ This section will cover the needed Git commands we need to push your work to the
 ### What is a Git Command?
 * Git commands are similar to terminal commands, but they are used for controlling GitHub from the terminal
 #### The Commands
-1. Initialize a repository
-	>```git init```
+1. **Initialize** a repository
+	>	 ```git init```
 	* This command **initializes a repository** in your working directory
 	* E.g. if you *changed directory* into ```Documents``` and then initialized a repository, you'd see the following:
 	```Initialized empty Git repository in C:/Users/patte/Documents/.git/```
-</br>
-</br>
-2. Add a remote origin
-	>```git remote add origin <repository link>```
+---
+2. **Add a remote origin**
+	>	```git remote add origin <repository link>```
 	* This command tells git **where** our **remote repository is**
 		* In other words, what's the link to the GitHub repository?
 	* Git needs to know this in order to add files to the repository hosted online
 	* E.g. to **add workshop 1** as the remote origin for our **empty initialized repository,** we'd say:
-	>```git remote add origin https://github.com/FRC296/FRC-Workshop-1.git```
-</br>
-</br>
-3. Add changes in working directory
+	>	```git remote add origin https://github.com/FRC296/FRC-Workshop-1.git```
+---
+3. **Add changes** to the working directory
 	>```git add .```
 	* This command adds **all** the files in our working directory to the *staging area*
 		* In other words, we're just telling git what files we want to add to our remote project
 	* If you only want to add one file at a time, you'd say ```git add file.txt```
-</br>
-</br>
-4. Commit your changes
+---
+4. **Commit** your changes
 	>```git commit```
 	* This command **saves** or commits our added files to our local working directory
 	* To add a message with your commit, you can say
 	```	git commit -m "This is my commit message!"```
 		* and you will see it added on GitHub
-</br>
-</br>
+---
 5. Pushing our changes
-	>```git push origin master```
+	>	```git push origin master```
 	* Here we are **pushing** or "sending" the work in our local directory to its remote origin, the *master* branch
 	* That's it!
 
