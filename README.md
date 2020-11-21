@@ -78,6 +78,10 @@ The most important building blocks of a program are *variables,* *operators*, *c
 	```
 	* Here you can see that the *main* function of the program is contained within a class, called *HelloWorld*
 		* This file would be saved as ```HelloWorld.java```
+* **Access Modifiers -- Public & Private**
+	* *Variables* and *functions* either declared as:
+		* **Public**: All functions from any file can access the data/function
+		* **Private**: Only functions within the surrounding class can access them
 ----
 
 ### Functions
@@ -91,17 +95,17 @@ The most important building blocks of a program are *variables,* *operators*, *c
 		* The **body** defines what we do with the arguments, and what we return
 * E.g. take a look at the following two functions
 	```java
-		int add(int x, int y)
+		public static int add(int x, int y)
 		{
 			int sum = x + y;
 			return sum;
 		}
 	```
-	* Here the **return type** is integer, the **arguments** are the two integers *x* and *y*, and the **body** of the function adds the two arguments. 		
+	* Here the **return type** is integer, the **arguments** are the two integers *x* and *y*, and the **body** of the function adds the two arguments. 
 * A function could also not return anything. In that case, we say the return type is ```void```
 
 	```java
-		void print()
+		private static void print()
 		{
 			System.out.println("Hello World!");
 		}
