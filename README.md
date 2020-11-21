@@ -1,5 +1,13 @@
-﻿# Basic Java Review
+
+# Basic Java Review
 In this workshop, we'll quickly go over Java basics, write some code, and then push it to the FRC 296 repository.
+Outline:
+1. Java review - variables, functions, all that good stuff
+2. Java coding challenge
+3. 10 minute break
+4. Git introduction
+5. Pushing with git
+* Visit [this Java playground](https://code.labstack.com/java) to code along if you wish!
 ## What is a programming language?
 * A programming language is what **allows us to talk to computers**
 * When we write and run a program, a computer will "read" our program and do what we ask it to
@@ -187,11 +195,14 @@ The most important building blocks of a program are *variables,* *operators*, *c
 * Using this [Java Playground](https://code.labstack.com/java), write a Java code that will have:
 
 	1. A function that takes voltage and current and **returns the total amount of power**.
-		* Takes two integers (or floats): Voltage and Current
-		* Returns one integer (or float): Power
+		* Takes two integers: Voltage and Current
+		* Returns one integer: Power
 	2. A function that takes a first name and last name and **returns the full name in capital letters as a single string**.
+		* Takes two string: First and Last name
+		* Returns one String: Full name in capitals
 
-	3. A function that prints your name *diagonally* using a **for loop**
+	3. **BONUS** 
+	A function that prints your name *diagonally* using a **for loop**
 		* E.g.
 	```java
 		A
@@ -207,7 +218,11 @@ The most important building blocks of a program are *variables,* *operators*, *c
 		* **String Concatenation**
 			* Like numbers, strings can *also be added together*
 				* We call this concatenation
-		* 
+		* **toUpperCase() function**
+			* Call ```my_string.toUpperCase()``` to make a string all capitals
+		* **charAt(int index) and length() function** 
+			* Call ```my_string.charAt(int index)``` to get the character at a position
+			* Call ```my_string.length()``` to get the length of a string
 		* ```System.out.print("Your text here");``` is used to print a statement to the terminal in Java
 		* You can use **special characters** ```\n``` and ```\t``` to format printed statements
 			* ```\n``` prints a line (called the **newline** character)
@@ -307,54 +322,47 @@ This section will cover the needed Git commands we need to push your work to the
 ### What is a Git Command?
 * Git commands are similar to terminal commands, but they are used for controlling GitHub from the terminal
 #### The Commands
-1. **Initialize** a repository
-	>	 ```git init```
-	* This command **initializes a repository** in your working directory
-	* E.g. if you *changed directory* into ```Documents``` and then initialized a repository, you'd see the following:
-	```Initialized empty Git repository in C:/Users/patte/Documents/.git/```
+1. **Cloning** a repository
+	>	 ```git clone <url>```
+	* This command **copies a repository** into your working directory
+	* E.g. if you *changed directory* into ```Documents``` and then cloned a repository, you'd see the remote reository copied into your local directory
 ---
-2. **Add a remote origin**
-	>	```git remote add origin <repository link>```
-	* This command tells git **where** our **remote repository is**
-		* In other words, what's the link to the GitHub repository?
-	* Git needs to know this in order to add files to the repository hosted online
-	* E.g. to **add workshop 1** as the remote origin for our **empty initialized repository,** we'd say:
-	>	```git remote add origin https://github.com/FRC296/FRC-Workshop-1.git```
----
-3. **Add changes** to the working directory
+2. **Add changes** to the working directory
 	>```git add .```
 	* This command adds **all** the files in our working directory to the *staging area*
 		* In other words, we're just telling git what files we want to add to our remote project
 	* If you only want to add one file at a time, you'd say ```git add file.txt```
 ---
-4. **Commit** your changes
+3. **Commit** your changes
 	>```git commit```
 	* This command **saves** or commits our added files to our local working directory
 	* To add a message with your commit, you can say
 	```	git commit -m "This is my commit message!"```
-		* and you will see it added on GitHub
+		* and you will see it added on GitHub 
 ---
-5. Pushing our changes
+4. **Pulling** from the remote repository
+	>	```git pull origin master```
+	* Here we are **pulling** from the origin, or adding the changes we *don't* have locally
+	* We need to do this to make sure our local repository is in the same state as the remote repository
+
+---
+5. **Pushing** our changes
 	>	```git push origin master```
 	* Here we are **pushing** or "sending" the work in our local directory to its remote origin, the *master* branch
 	* That's it!
 
-#### Recap
-1. We initialize a new repository
-	>```git init```
-2. We give Git the link for where the remote repository is
-	>```git remote add origin <repository link>```
-3. We add the files we wish to push to the remote repository
+## Recap -- The Final Push
+1. First log in using git bash with the following command:
+	>```git config --global user.email "robostudent@loyola.ca"```
+3. We clone the existing repository using its url
+	>```git clone https://github.com/FRC296/FRC-Workshop-1.git```
+4. We add the files we wish to push to the remote repository
 	>```git add .```
 	* In this case we're adding all
-4. We save our work using a commit
+5. We save our work using a commit
 	>```git commit```
-5. And finally, we send our work to the remote repository
+6. We pull from the remote repository
+	>```git pull origin master```
+7. And finally, we send our work to the remote repository
 	>```git push origin master```   
 
-## The Final Push
-1. Change into the directory where your java file is saved using ```cd``` and ```ls``` to navigate the terminal
-2. Initialize an empty repository using ```git init```
-3. Add your files by calling ```git add .```
-4. Commit your changes with a message of your choice using ```git commit -m "message"```
-5. Push your changes to the master branch using ```git push origin master```
